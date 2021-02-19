@@ -9,5 +9,6 @@ module ALUA (
 
     ALUEXT aluext(.A(A), .B(B), .S(SEL), .OPA(c0), .OPB(c1), .c(c2) );
     ADDER adder(.IA(c0), .IB(c1), .cin(c2), .IS(c3), .cout() );
+    assign OUT = c3;
 
 endmodule
