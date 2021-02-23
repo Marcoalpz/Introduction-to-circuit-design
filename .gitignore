@@ -1,4 +1,9 @@
-.mpf
-.qpf
-.qsf
-.v.bak
+*.mpf
+*.qpf
+*.qsf
+*.v.bak
+
+COUNTER/src/db
+COUNTER/src/incremental_db
+COUNTER/src/output_files
+COUNTER/src/work
