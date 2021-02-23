@@ -3,6 +3,7 @@
 *.qsf
 *.v.bak
 *.qws
+*.cr.mti
 
 COUNTER/src/db
 COUNTER/src/incremental_db
