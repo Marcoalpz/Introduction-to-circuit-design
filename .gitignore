@@ -2,8 +2,19 @@
 *.qpf
 *.qsf
 *.v.bak
+*.qws
 
 COUNTER/src/db
 COUNTER/src/incremental_db
 COUNTER/src/output_files
 COUNTER/src/work
+
+CLOCK_DIVIDER/src/db
+CLOCK_DIVIDER/src/incremental_db
+CLOCK_DIVIDER/src/output_files
+CLOCK_DIVIDER/src/work
+
+COUNTERto7SEGMENT/src/db
+COUNTERto7SEGMENT/src/incremental_db
+COUNTERto7SEGMENT/output_files
+COUNTERto7SEGMENT/src/work
