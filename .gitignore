@@ -19,3 +19,8 @@ COUNTERto7SEGMENT/src/db
 COUNTERto7SEGMENT/src/incremental_db
 COUNTERto7SEGMENT/output_files
 COUNTERto7SEGMENT/src/work
+
+ALU/src/db
+ALU/src/incremental_db
+ALU/src/output_files
+ALU/src/work
