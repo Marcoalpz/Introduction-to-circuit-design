@@ -6,11 +6,11 @@ module ALUL (
 );
     always @(*) begin
         case (SEL)
-            2'b00 : OUT = A & B;
-            2'b01 : OUT = A | B;
-            2'b10 : OUT = A ^ B;
-            2'b11 : OUT = ~ A;
-            default : OUT = 8'bxx; 
+            2'b00 : OUT = A & B; // AND bitwise
+            2'b01 : OUT = A | B; // OR bitwise
+            2'b10 : OUT = A ^ B; // XOR bitwise
+            2'b11 : OUT = ~ A; // Negate A bitwise
+            default : OUT = 8'bxx; // Default : x
         endcase
     end
 endmodule
