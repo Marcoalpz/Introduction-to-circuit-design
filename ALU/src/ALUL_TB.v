@@ -1,29 +1,52 @@
-`timescale 1ps/1ps
+`timescale 1ns/1ps
 
 module ALUL_TB;
 
-    integer i;
-    integer j;
-    reg [7:0] A;
-    reg [7:0] B;
-    reg [2:0] SEL;
-
-    wire [7:0] OUT;
-
-    ALUL uut(.A(A), .B(B), .SEL(SEL), .OUT(OUT));
-    initial begin
-        A = 0;
-        B = 0;
-        SEL = 0;
-        #100;
-
-        for ( i = 0; i < 15; i = i + 1) begin
-            A = i;
-            B = i + 1;
-            for (j = 0; j < 8; j = j + 1 ) begin
-                SEL = j;
-                #100;
-            end
-        end
-    end
+	reg [7:0]A;
+	reg [7:0]B;
+	reg [1:0]S;
+	
+	wire [7:0] OUT;
+	
+	ALUL uut(
+	
+		.A(A),
+		.B(B),
+		.SEL(S),
+		.OUT(OUT)
+	);
+	
+	initial begin 
+		A = 0;
+		B = 0;
+		S = 2'b00;
+		
+		//Times scale
+		#100
+		
+		A = 7'b00001111;
+		B = 7'b00000101;
+			//Expected -> 00000101
+		
+		#100
+		
+		A = 7'b00001111;
+		B = 7'b00000101;
+		S = 2'b01;
+			//Expected -> 00001111
+		#100
+		
+		A = 7'b00001111;
+		B = 7'b00000101;
+		S = 2'b10;
+			//Expected -> 00001010
+		#100
+		
+		A = 7'b00001111;
+		B = 7'b00000101;
+		S = 2'b11;
+			//Expected -> 11110000
+		end
 endmodule
+		
+		
